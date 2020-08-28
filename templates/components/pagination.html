@@ -1,0 +1,57 @@
+{% load utility %}
+
+<div class="pagination__wrap">
+  {% if page_obj and page_obj.has_other_pages %}
+  <nav>
+    <p class="pagination__count">
+      <span class="pagination__count-span">{{ page_obj.paginator.count }}</span>
+      <span class="pagination__count-sp">件</span>
+      ( {{ page_obj.start_index }}~{{ page_obj.end_index }}件を表示 )
+    </p>
+    <ul class="pagination">
+
+      {% if page_obj.has_previous%}
+      <li class="page-item page-item__prev d-md-flex">
+        <a class="page-link", href="?{% url_replace request 'page' page_obj.previous_page_number %}", aria-label='前へ'>
+          <i class="fas fa-angle-left"></i>
+          前へ
+        </a>
+      </li>
+      {% endif %}
+
+      <div class="page-item__numbers">
+        {% for i in page_obj.paginator.page_range %}
+          {% if i == page_obj.number %}
+            <li class="page-item active">
+              <a class="page-link number", href="?{% url_replace request 'page' forloop.counter %}">{{ forloop.counter }}</a>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a class="page-link number", href="?{% url_replace request 'page' forloop.counter %}">{{ forloop.counter }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if page_obj.has_next%}
+      <li class="page-item page-item__prev d-md-flex">
+        <a class="page-link", href="?{% url_replace request 'page' page_obj.next_page_number %}", aria-label='次へ'>
+          次へ
+          <i class="fas fa-angle-right", aria-hidden="true"></i>
+        </a>
+      </li>
+      {% endif %}
+
+    </ul>
+  </nav>
+  {% elif page_obj %}
+    <nav>
+      <p class="pagination__count">
+          <span class="pagination__count-span">{{ page_obj.paginator.count }}</span>
+          <span class="pagination__count-sp">件</span>
+      </p>
+    </nav>
+
+  {% endif %}
+
+</div>

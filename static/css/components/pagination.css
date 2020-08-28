@@ -1,0 +1,78 @@
+.pagination__wrap {
+  margin-bottom: 1rem;
+  border-top: 1px solid gray;
+  padding-top: 1rem;
+}
+.pagination__wrap > nav {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.pagination__count {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+.pagination__count-span {
+  color: blue;
+  font-size: 2.125rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.pagination {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}
+.page-item__numbers {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-radius: 40px!important;
+  transition: all .3s;
+  padding: 0 11px;
+  margin: 0 5px;
+  min-width: 40px;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  outline: none;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.page-link {
+  margin-right: 10px;
+}
+a.page-link {
+  margin-left: 10px;
+}
+.page-link.number{
+  background-color: white;
+  border: 1px solid gray;
+  color: black;
+}
+.page-item.active>.page-link {
+  color: white;
+  box-shadow: 0 1px 15px 1px rgba(39,39,39,.1);
+  font-size: 0.875rem;
+  padding-top: 10px;
+}
+.page-item.active>.page-link, .page-item.active>.page-link:focus, .page-item.active>.page-link:hover {
+  background-color: #bce2e8;
+  border-color: white;
+  color: white;
+}

@@ -1,0 +1,49 @@
+.post-detail-title {
+    font-size: 30px;
+}
+
+.post-detail-date {
+    font-size: 13px;
+    color: gray;
+}
+
+.post-detail-body {
+    padding: 20px 0px;
+    border-top: gray 1px solid;
+    border-bottom: gray 1px solid;
+}
+
+.comment-info{
+    margin-top: 20px;
+}
+
+.comment {
+    border: gray 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.comment-head{
+    display: flex;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.comment-date {
+    color: gray;
+    margin-left: 10px;
+}
+
+.link_to_comment {
+    margin-top: 20px;
+}
+
+
+
+.links-other-articles{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.links-other-articles a{
+    padding: 10px;
+}

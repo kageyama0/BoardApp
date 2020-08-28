@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/pages/post.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+
+  {% csrf_token %}
+  <div class="form-div">
+    <p>掲示板に投稿しましょう！</p>
+    <p><input type="text" placeholder="タイトル" name="title"></p>
+    <p><textarea name="body" rows="8" cols="60" placeholder="投稿内容"></textarea></p>
+    <input type="submit" value="投稿する">
+  </div>
+
+</form>
+
+{% endblock %}

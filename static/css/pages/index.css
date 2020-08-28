@@ -1,0 +1,18 @@
+.board{
+  border: gray 1px solid;
+}
+
+.post-card{
+  display: block;
+  border-bottom: solid 1px gray;
+  padding: 8px 15px;
+}
+
+.post-card-title{
+  font-size: 20px;
+}
+
+.post-card-date{
+  color: gray;
+  font-size: 14px;
+}

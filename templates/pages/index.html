@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/pages/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/components/pagination.css' %}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="board">
+  {% for post in post_list %}
+  <a class="post-card" href="{% url 'post_detail' pk=post.pk %}">
+    <div class="post-catd-title">{{ post.title }}</div>
+    <div class="post-card-date">投稿日時：{{ post.pub_date }}</div>
+  </a>
+  {% endfor %}
+</div>
+
+{% include "components/pagination.html" %}
+
+{% endblock %}

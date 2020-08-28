@@ -1,0 +1,17 @@
+<div>
+  {% if comment_list.count %}
+    <div class="comment-info">{{ comment_list.count }}件のコメントがあります。</div>
+  {% else %}
+    <div class="comment-info">まだコメントはありません。是非コメントしてください。</div>
+  {% endif %}
+
+  {% for comment in comment_list %}
+  <div class="comment">
+    <div class="comment-head">
+      <div class="comment-name">{{forloop.counter}}. {{ comment.name }}さん</div>
+      <div class="comment-date">{{ comment.pub_date }}</div>
+    </div>
+    <div class="comment-text">{{ comment.text }}</div>
+  </div>
+  {% endfor %}
+</div>
