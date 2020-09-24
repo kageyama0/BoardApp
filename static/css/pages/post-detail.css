@@ -1,13 +1,13 @@
-.post-detail-title {
+.article-detail-title {
     font-size: 30px;
 }
 
-.post-detail-date {
+.article-detail-date {
     font-size: 13px;
     color: gray;
 }
 
-.post-detail-body {
+.article-detail-body {
     padding: 20px 0px;
     border-top: gray 1px solid;
     border-bottom: gray 1px solid;

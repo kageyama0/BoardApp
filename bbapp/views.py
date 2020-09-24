@@ -13,7 +13,7 @@ class IndexView(ListView):
 
 
 class PostDetailView(DetailView):
-    template_name = 'pages/post-detail.html'
+    template_name = 'pages/article-detail.html'
     model = PostModel
     context_object_name = 'post'
 
@@ -31,7 +31,7 @@ class PostView(CreateView):
 
 
 class CommentCreateView(CreateView):
-    template_name = 'pages/comment_post.html'
+    template_name = 'pages/comment-post.html'
     model = CommentModel
     form_class = CommentCreateForm
 
